@@ -1,0 +1,149 @@
+.App{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.displyResG{
+  font-size: 20px;
+  color:green;
+}
+.displyRes,
+.displyResR,
+.error{
+  font-size: 20px;
+  margin-top:0px;
+  color:red;
+}
+
+.joinChatContainer {
+ background-color: #bdd3e9;
+ margin:auto;
+ padding: 20px;
+ width:70%;
+ border-radius: 8px;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.Username,
+.PassWord,
+.PhoneNumber{
+width:80%;
+height:28px;
+border-radius: 10px;
+font-family:arial,bold;
+margin:8px;
+}
+.LogButtonDiv{
+  display: flex;
+  justify-content:center;font-family:arial,bold;
+ }
+ .LPageButton {
+  background-color: #007bff;
+  margin:20px;
+  color: #fff;
+  padding: 20px 30px;
+  font-family:arial,bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+ }
+ 
+ .LPageButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+ }
+ 
+
+ input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #dfe1e5;
+  border-radius: 10px;
+  margin-right: 10px;
+ }
+ .Minput{
+   padding: 10px;
+  border: 1px solid #dfe1e5;
+  border-radius:30px;
+  margin-right: 10px;
+  height:30px;
+ }
+ 
+ .SMbutton {
+  background-color: #4285f4; /* Google Blue */
+  color: #ffffff;
+  border: none;
+  font-size:20px;
+  border-radius:50px;
+  padding: 20px 20px;
+  cursor: pointer;
+ }
+ button {
+   background-color: #4285f4; /* Google Blue */
+   color: #ffffff;
+   border: none;
+   font-size:20px;
+   border-radius:50px;
+   padding: 20px 20px;
+   margin: 10px;
+   cursor: pointer;
+  }
+  
+ button:hover {
+  background-color: #3367d6; /* Darker shade on hover */
+ }
+ button.SwitchB{
+  position: absolute;
+  top: 1%; 
+  right: 10px; 
+ }   
+
+.homeForm{
+  position: fixed; /* Stay fixed regardless of scrolling */
+  top: 50%; /* Push the element down 50% of the viewport height */
+  left: 50%; /* Push the element right 50% of the viewport width */
+  transform: translate(-50%, -50%); /* Adjust position back by 50% of its own size */
+  background-color: lightblue; /* Optional styling */
+  padding: 20px;
+  border:nune;
+  border-radius:20px;
+  text-align: center;
+  width:380px;
+}
+.select{
+  display:flex;
+ margin-left:125px;
+}
+
+.image{
+  width:90px;
+  border-radius:100px;
+}
+t.tableDiv {
+  text-align: center; /* Centers the content (like h2 and table) horizontally */
+  margin: 0 auto; /* Optional: Centers the container itself */
+}
+
+.tableDiv h2 {
+  text-align: center; /* Centers the heading text */
+}
+
+table {
+  width: 80%; /* Sets the table width to 80% */
+  margin: 20px auto; /* Centers the table horizontally and adds vertical space */
+  border-collapse: collapse; /* Collapses the borders between cells */
+}
+
+th, td {
+  padding: 8px; /* Adds padding for better readability */
+  text-align: left; /* Aligns text to the left in table cells */
+  border: 1px solid #ddd; /* Adds a border around each cell */
+}
+th{
+  background-color: aqua;
+}
+.w{
+  text-align: center;
+}

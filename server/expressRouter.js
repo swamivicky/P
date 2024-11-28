@@ -21,6 +21,10 @@ const upload = multer({ storage: storage }); // Configure multer with storage se
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.send('Welcome to the Server!'); // Or any response you want
+});
+
 
 router.get('/', async (req, res) => {
   console.log(req.headers.authorization);

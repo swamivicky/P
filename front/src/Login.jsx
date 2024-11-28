@@ -24,7 +24,7 @@ const navigate = useNavigate()  ;
       formik.handleReset();
       console.log(vals);
       // Adjust the URL to the correct endpoint for user login
-      fetch("http://localhost:5555/login", {
+      fetch("http://localhost:3000/login", {
         method: "POST",
         credentials: "include",
         headers: {

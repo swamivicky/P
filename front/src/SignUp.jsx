@@ -28,7 +28,7 @@ function SignUp() {
       const vals = { ...values };
       actions.resetForm();
       console.log(vals);
-      fetch('http://localhost:5555/signUp', {
+      fetch('http://localhost:3000/signUp', {
         method: 'POST',
         credentials: 'include', // Send cookies and authentication information
         headers: {

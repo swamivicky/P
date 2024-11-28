@@ -6,24 +6,28 @@ import bodyParser from "body-parser";
 import router from "./expressRouter.js"; // Default import (no curly braces)
 
 const app = express();
-app.use(bodyParser.json());
-app.use(express.json());
 
-app.use('/uploads', express.static('uploads'));
-
-
+// Apply CORS middleware first
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://192.168.1.6:3000'], // Allow requests from your local React app
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-  credentials: true, // Allow cookies and other credentials
+  origin: 'http://localhost:3000', // Replace with your frontend's address
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 
+// Handle OPTIONS requests
+app.options('*', cors());
 
-
+app.use(bodyParser.json());
+app.use(express.json());
+app.use('/uploads', express.static('uploads'));
+app.get('/', (req, res) => {
+  res.send('Welcome to the Server!'); // Or any response you want
+});
+// Routes
 app.use('/', router);
 
-//The server will only start if the mongodb is connected porperly
+// Connect to MongoDB and start server
 mongoose.connect(mongoDbURL)
   .then(() => {
     console.log("Connected to DataBase");

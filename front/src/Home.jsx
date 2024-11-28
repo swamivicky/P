@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://localhost:5555/", {
+        const response = await fetch("http://localhost:3000/", {
           method: "GET", // Default method for this example
           headers: {
             "Content-Type": "application/json", // Specify the type of data expected (optional for GET)
@@ -90,7 +90,7 @@ const Home = () => {
     }
 
     // Sending the formData via fetch
-    const response = await fetch('http://localhost:5555/add', {
+    const response = await fetch('http://localhost:3000/add', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`, // Make sure the token is correctly passed
@@ -172,7 +172,7 @@ const Home = () => {
       }
   
       try {
-        const response = await fetch(`http://localhost:5555/update/`, {
+        const response = await fetch(`http://localhost:3000/update/`, {
           method: "PUT",
           headers: {
             Authorization: `${token}`, // Add only the Authorization header
@@ -418,7 +418,7 @@ return (
     try {
       const employeeId = employee._id;
 
-      const response = await fetch(`http://localhost:5555/delete`, {
+      const response = await fetch(`http://localhost:3000/delete`, {
         method: "DELETE",
         headers: {
           'Authorization': ` ${token}`, // Include the token in the Authorization header

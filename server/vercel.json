@@ -1,5 +1,27 @@
 {
-    "version":2,
-    "builds":[{"src":"./index.js","use":"@vercel/node"}],
-    "routes":[{"src":"/(.*)","dest":"/"}]
+    "version": 2,
+    "builds": [
+        {
+            "src": "./index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "env": {
+        "PORT": "5555",
+        "MONGO_DB_URL": "mongodb+srv://vickhyathbhora:zLf5xlx0aVAg68Jc@vicky.ifsvt.mongodb.net/?retryWrites=true&w=majority&appName=vicky"
+    },
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "/index.js"
+        },
+        {
+            "src": "/uploads/(.*)",
+            "dest": "/uploads/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.js"
+        }
+    ]
 }

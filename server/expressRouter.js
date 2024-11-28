@@ -21,8 +21,8 @@ const upload = multer({ storage: storage }); // Configure multer with storage se
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Welcome to the Server!'); // Or any response you want
+router.get('/u', (req, res) => {
+  res.send('Welcome to the Server! vicky'); // Or any response you want
 });
 
 
@@ -253,7 +253,7 @@ router.post("/add", upload.single("image"), async (req, res) => {
   }
 });
 
-router.post("/signUp", async (req, res) => {
+router.post("/signup", async (req, res) => {
  console.log(`This is req : ${req.body}`);
   let TF; 
     try {

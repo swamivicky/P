@@ -4,7 +4,8 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import router from "./expressRouter.js"; // Default import (no curly braces)
-
+import dotenv from 'dotenv';
+dotenv.config();
 const app = express();
 
 // Apply CORS middleware first
@@ -21,9 +22,7 @@ app.options('*', cors());
 app.use(bodyParser.json());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
-app.get('/', (req, res) => {
-  res.send('Welcome to the Server!'); // Or any response you want
-});
+
 // Routes
 app.use('/', router);
 

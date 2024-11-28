@@ -1,5 +1,4 @@
 import express from "express";
-import { PORT, mongoDbURL } from "./config.js";
 import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
@@ -25,6 +24,9 @@ app.use('/uploads', express.static('uploads'));
 
 // Routes
 app.use('/', router);
+
+const PORT = process.env.PORT || 5555;
+const mongoDbURL = process.env.MONGO_DB_URL;
 
 // Connect to MongoDB and start server
 mongoose.connect(mongoDbURL)
